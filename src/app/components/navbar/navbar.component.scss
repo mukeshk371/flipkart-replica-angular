@@ -1,0 +1,58 @@
+@import "./src/assets/scss/abstracts/variables";
+
+nav {
+    background: $primary-color;
+    height: 56px;
+    padding: 0 10em 0 13em;
+    color: $white;
+    z-index: 999;
+
+    .search-box {
+        background: $white;
+        width: 54%;
+        height: 36px;
+        margin: 0 auto 0 12px;
+        padding-right: 12px;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+        > input {
+            width: 100%;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 16px;
+            border: none;
+        }
+    }
+
+    .action-box > a {
+        margin: 0 20px;
+        color: var(--white);
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        text-decoration: none;
+        transition: $transition;
+        &::after {
+            content: "";
+            background: url("/assets/images/arrow-down-white.svg") no-repeat;
+            height: 15px;
+            width: 15px;
+            margin-left: 3px;
+            display: inline-flex;
+            transition: $transition;
+        }
+        &:hover:after {
+            transform: rotate(-180deg);
+        }
+        &.cart-btn {
+            img {
+                margin-right: 8px;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

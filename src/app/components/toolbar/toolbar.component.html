@@ -1,0 +1,12 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="toolbar">
+    <a href="javascript:void(0)" *ngFor="let item of toolbarOptions" fxLayout="column" fxLayoutAlign="center center">
+        <img src="{{item.imgUrl}}" alt="top-offers">
+        <span fxLayoutAlign="center center">{{item.title}} <i *ngIf="toolbarOptions.length>1"
+                class="arrow down"></i></span>
+        <ng-template *ngIf="true">
+            <div *ngFor="let details of item.category">
+                <span>{{details}}</span>
+            </div>
+        </ng-template>
+    </a>
+</div>
